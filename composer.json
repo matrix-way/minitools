@@ -1,0 +1,15 @@
+{
+    "minimum-stability": "dev",
+    "autoload": {
+        
+        "psr-4": {
+            "Mangocube\\": "app/",
+            "MangoCube_Packages\\": "packages/"
+            
+        }
+        
+    },
+    "require-dev": {
+        "symfony/var-dumper": "5.4.x-dev"
+    }
+}
