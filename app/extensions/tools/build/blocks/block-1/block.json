@@ -7,7 +7,41 @@
   "icon": "smiley",
   "description": "Example block written with ESNext standard and JSX support – build step required.",
   "supports": {
-    "html": false
+    "html": false,
+    "color": {
+      "text": true,
+      "background": true,
+      "link": true
+    },
+    "spacing": {
+      "margin": true,
+      "padding": true,
+      "blockGap": true
+    },
+    "typography": {
+      "fontSize": true,
+      "lineHeight": true
+    }
+  },
+  "attributes": {
+    "textAlign": {
+      "type": "string",
+      "default": "center"
+    },
+    "message": {
+      "type": "string",
+      "source": "text",
+      "selector": "div",
+      "default": "block controls"
+    },
+    "bg_color": {
+      "type": "string",
+      "default": "#000000"
+    },
+    "text_color": {
+      "type": "string",
+      "default": "#ffffff"
+    }
   },
   "textdomain": "my-first-block",
   "editorScript": "file:./index.js",

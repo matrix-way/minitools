@@ -1,13 +1,18 @@
 import { __ } from '@wordpress/i18n';
 import { useBlockProps } from '@wordpress/block-editor';
 
-export default function save() {
+export default function save( {attributes} ) {
+	const blockProps = useBlockProps.save();
+
 	return (
-		<p {...useBlockProps.save()}>
-			{__(
-				'My First Block – hello from the saved content!',
-				'my-first-block'
-			)}
+		<p {...blockProps} style={ {
+			backgroundColor: attributes.bg_color,
+			color: attributes.text_color,
+			'textAlign' : attributes.textAlign
+		} }>
+			
+			{ attributes.message }
+			
 		</p>
 	);
 }
